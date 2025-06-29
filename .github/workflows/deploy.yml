@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    needs: build-and-test  # This ensures the build-and-test job passes before deploying
+    # We don't need the "needs" parameter since this is a separate workflow
     
     steps:
     - uses: actions/checkout@v3
